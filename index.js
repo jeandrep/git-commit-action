@@ -13,7 +13,7 @@ async function run() {
     await exec('git', [ '-C', workingDirectory, 'add', '-A' ])
     await exec('git', [ '-C', workingDirectory, 'config', '--local', 'user.name', authorName ])
     await exec('git', [ '-C', workingDirectory, 'config', '--local', 'user.email', authorEmail ])
-    await exec('git', [ '-C', workingDirectory, 'commit', '--no-verify', '-m', commitMessage ])
+    await exec('git', [ '-C', workingDirectory, 'commit', '--no-verify', '-m', commitMessage, ' || echo "ignore commit failure, proceed"' ])
     await exec('git', [ '-C', workingDirectory, 'rev-parse', 'HEAD' ], { listeners: { stdout: buffer => sha += buffer.toString() }})
     
     core.setOutput('sha', sha)
