@@ -967,6 +967,7 @@ async function run() {
     await exec('git', [ '-C', workingDirectory, 'rev-parse', 'HEAD' ], { listeners: { stdout: buffer => sha += buffer.toString() }})
     
     core.setOutput('sha', sha)
+    core.setOutput('status', status)
   } catch (error) {
     core.setFailed(error.message)
   }
