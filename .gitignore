@@ -3,6 +3,12 @@ node_modules/
 # Editors
 .vscode
 
+# IntelliJ
+.idea
+*.ipr
+*.iml
+*.iws
+
 # Logs
 logs
 *.log
