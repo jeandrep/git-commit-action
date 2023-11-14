@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/zwaldowski/git-commit-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.0",
-    "@actions/exec": "^1.0.2"
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.1.1"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.20.5",
-    "eslint": "^6.6.0"
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.0.0"
   }
 }
